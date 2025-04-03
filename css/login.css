@@ -1,0 +1,88 @@
+/* Thiết lập nền tối */
+body {
+    background: linear-gradient(to bottom, #000000, #121212);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container đăng nhập */
+.login-container {
+    background: #121212;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tiêu đề */
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Hiển thị lỗi */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Ô nhập liệu */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+/* Ô nhập liệu focus */
+input:focus {
+    outline: none;
+    border-color: #1DB954;
+}
+
+/* Nút đăng nhập */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: #1DB954;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng hover */
+button:hover {
+    background: #1ed760;
+}
+
+/* Liên kết */
+a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hover cho liên kết */
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Khoảng cách cho quên mật khẩu */
+p {
+    margin-top: 15px;
+}

@@ -1,0 +1,109 @@
+/* Reset mặc định */
+body,
+h2,
+p,
+button,
+input {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Thiết lập nền tối */
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container chính */
+.register-container {
+    background-color: transparent;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Tiêu đề */
+.register-container h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Nhãn và ô nhập */
+label {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* Nút chính */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+button.submit-btn {
+    background-color: #1db954;
+    color: #000;
+}
+
+button.submit-btn:hover {
+    background-color: #1ed760;
+}
+
+/* Đường kẻ phân cách */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #444;
+    margin: 20px 0;
+}
+
+/* Các nút đăng nhập với MXH */
+.social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.social-login i {
+    margin-right: 10px;
+}
+
+/* Liên kết */
+a {
+    color: #1db954;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

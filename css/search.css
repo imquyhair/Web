@@ -1,0 +1,149 @@
+/* Container chính */
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề kết quả tìm kiếm */
+h3 {
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Căn giữa card bài hát */
+.song-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px; /* Giới hạn chiều rộng */
+    width: 100%;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+    margin: 10px auto; /* Để căn giữa */
+}
+
+.song-card:hover {
+    transform: scale(1.03);
+}
+
+/* Hình ảnh bài hát */
+.song-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Thông tin bài hát */
+.song-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.song-info h5 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.song-info p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0 10px 0;
+}
+
+/* Nút nghe ngay */
+.song-card button {
+    padding: 12px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.song-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Khi không tìm thấy bài hát */
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* Global Styles */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Định dạng thanh tìm kiếm */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    width: 30%;
+}
+
+.search-container input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Căn giữa phần kết quả tìm kiếm */
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

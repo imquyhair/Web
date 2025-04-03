@@ -1,0 +1,133 @@
+/* chill-music.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #20025a, #320066);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề kết quả tìm kiếm */
+h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Thẻ hiển thị bài hát */
+.song-card {
+    display: flex;
+    align-items: center;
+    background: #3f0071;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.song-card:hover {
+    transform: scale(1.05);
+}
+
+/* Hình ảnh bài hát */
+.song-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+
+/* Thông tin bài hát */
+.song-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.song-info h5 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1.2px;
+}
+
+.song-info p {
+    font-size: 18px;
+    color: #bbb;
+    margin: 0;
+    margin-top: 5px;
+}
+
+/* Hiển thị tên bài hát và tác giả ngang hàng */
+.song-card .song-info span {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 20px;
+    color: #fff;
+}
+
+h5 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #4a148c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.player-left {
+    display: flex;
+    align-items: center;
+}
+
+.player-left img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.player-info h5,
+.player-info p {
+    margin: 0;
+}
+
+.player-center audio {
+    width: 100%;
+}
+
+#seek-bar {
+    width: 100%;
+}
+
+.player-right button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.player-right button:hover {
+    color: #ff9800;
+}

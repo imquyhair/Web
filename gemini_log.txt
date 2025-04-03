@@ -1,0 +1,34 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Tôi gợi ý bạn nghe bài **Houdini** của Eminem, **Lovin On Me** của Jack Harlow, **Montero** của Lil Nas X, hoặc **Vị Nhà** của Đen.  Đây đều là những bài nhạc rap với nhiều sắc thái khác nhau, từ năng động đến hoài niệm. Bạn có thể chọn bài hát phù hợp với tâm trạng hiện tại của mình.\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.019006874187883126
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2348,
+    "candidatesTokenCount": 83,
+    "totalTokenCount": 2431,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2348
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 83
+      }
+    ]
+  },
+  "modelVersion": "gemini-1.5-pro-002"
+}
