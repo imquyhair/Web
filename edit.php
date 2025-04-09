@@ -33,6 +33,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa bài hát</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #007bff;
+            text-align: center;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
 <div class="container">
     <h2>✏️ Chỉnh sửa bài hát</h2>
     <form method="POST">

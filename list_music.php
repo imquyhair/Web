@@ -44,7 +44,7 @@ $total_pages = ceil($total_row['total'] / $limit);
 
                 <div class="search-container">
                     <form action="search.php" method="GET" id="searchForm">
-                        <input type="text" name="search" id="searchInput" placeholder="Nhập tên bài hát hoặc nghệ sĩ...">
+                        <input type="text" name="search" id="searchInput" placeholder="Enter song name or artist...">
                         <button type="submit">🔍</button>
                     </form>
                 </div>
@@ -74,18 +74,18 @@ $total_pages = ceil($total_row['total'] / $limit);
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="logout.php">
-                                    <i class="fa-solid fa-sign-out-alt"></i> Đăng xuất
+                                    <i class="fa-solid fa-sign-out-alt"></i> Log out
                                 </a>
                             </li>
                         <?php else: ?>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="login.php">
-                                    <i class="fa-solid fa-sign-in-alt"></i> Đăng nhập
+                                    <i class="fa-solid fa-sign-in-alt"></i> Log in
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="register.php">
-                                    <i class="fa-solid fa-user-plus"></i> Đăng ký
+                                    <i class="fa-solid fa-user-plus"></i> Register
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -97,7 +97,7 @@ $total_pages = ceil($total_row['total'] / $limit);
 
     <div class="container my-5 song-container" data-aos="fade-up">
         <div class="section-header">
-            <h5 class="section-titles1">Danh sách bài hát</h5>
+            <h5 class="section-titles1">Song list</h5>
         </div>
         <div class="song-list">
             <?php if ($result->num_rows > 0): ?>
@@ -113,7 +113,7 @@ $total_pages = ceil($total_row['total'] / $limit);
                     </div>
                 <?php endwhile; ?>
             <?php else: ?>
-                <p>Không có bài hát nào.</p>
+                <p>There are no songs.</p>
             <?php endif; ?>
         </div>
 
@@ -122,7 +122,7 @@ $total_pages = ceil($total_row['total'] / $limit);
             <nav>
                 <ul class="pagination justify-content-center mt-4">
                     <?php if ($page > 1): ?>
-                        <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">&laquo; Trước</a></li>
+                        <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">&laquo; Back</a></li>
                     <?php endif; ?>
 
                     <?php for ($i = 1; $i <= $total_pages; $i++): ?>
@@ -132,7 +132,7 @@ $total_pages = ceil($total_row['total'] / $limit);
                     <?php endfor; ?>
 
                     <?php if ($page < $total_pages): ?>
-                        <li class="page-item"><a class="page-link" href="?page=<?= $page + 1 ?>">Sau &raquo;</a></li>
+                        <li class="page-item"><a class="page-link" href="?page=<?= $page + 1 ?>">Front &raquo;</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>

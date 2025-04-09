@@ -13,7 +13,7 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
 
     $stmt = $conn->prepare("SELECT * FROM songs WHERE title LIKE ? OR artist LIKE ? LIMIT 5");
     if (!$stmt) {
-        die("Lỗi SQL: " . $conn->error);
+        die("SQL Error: " . $conn->error);
     }
 
     $stmt->bind_param("ss", $search_param, $search_param);
@@ -21,12 +21,12 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
     $result = $stmt->get_result();
     $stmt->close();
 } else {
-    echo "<script>alert('Vui lòng nhập từ khóa tìm kiếm!'); window.history.back();</script>";
+    echo "<script>alert('Please enter a search keyword!'); window.history.back();</script>";
     exit();
 }
 
 if (!$result) {
-    die("Lỗi truy vấn: " . $conn->error);
+    die("Query error: " . $conn->error);
 }
 ?>
 
@@ -37,7 +37,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Kết quả tìm kiếm</title>
+    <title>Search Results</title>
     <link rel="stylesheet" href="css/search.css">
 </head>
 
@@ -51,7 +51,7 @@ if (!$result) {
 
                 <div class="search-container">
                     <form action="search.php" method="GET" id="searchForm">
-                        <input type="text" name="search" id="searchInput" placeholder="Nhập tên bài hát hoặc nghệ sĩ...">
+                        <input type="text" name="search" id="searchInput" placeholder="Enter song or artist name...">
                         <button type="submit">🔍</button>
                     </form>
                 </div>
@@ -81,18 +81,18 @@ if (!$result) {
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="logout.php">
-                                    <i class="fa-solid fa-sign-out-alt"></i> Đăng xuất
+                                    <i class="fa-solid fa-sign-out-alt"></i> Logout
                                 </a>
                             </li>
                         <?php else: ?>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="login.php">
-                                    <i class="fa-solid fa-sign-in-alt"></i> Đăng nhập
+                                    <i class="fa-solid fa-sign-in-alt"></i> Login
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="register.php">
-                                    <i class="fa-solid fa-user-plus"></i> Đăng ký
+                                    <i class="fa-solid fa-user-plus"></i> Register
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -103,7 +103,7 @@ if (!$result) {
     </section>
 
     <div class="container mt-5">
-        <h3 class="text-center">Kết quả tìm kiếm</h3>
+        <h3 class="text-center">Search Results</h3>
 
         <?php if ($result && $result->num_rows > 0): ?>
             <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -117,8 +117,8 @@ if (!$result) {
                                 <div class="col-md-8 d-flex flex-column justify-content-center">
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $row["title"] ?></h5>
-                                        <p class="card-text text-muted">Nghệ sĩ: <?= $row["artist"] ?></p>
-                                        <a href="playlist.php?id=<?= $row["id"] ?>" class="btn btn-primary">Nghe ngay</a>
+                                        <p class="card-text text-muted">Artist: <?= $row["artist"] ?></p>
+                                        <a href="playlist.php?id=<?= $row["id"] ?>" class="btn btn-primary">Play Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ if (!$result) {
                 <?php endwhile; ?>
             </div>
         <?php else: ?>
-            <p class="text-center text-danger fw-bold">Không tìm thấy bài hát nào.</p>
+            <p class="text-center text-danger fw-bold">No songs found.</p>
         <?php endif; ?>
     </div>
 </body>

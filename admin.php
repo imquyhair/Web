@@ -13,6 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý bài hát | Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <style>
@@ -181,8 +182,8 @@ session_start();
 
     <div class="sidebar">
         <h4 class="text-white text-center">Admin Panel</h4>
-        <a href="admin.php"><i class="fa fa-music"></i> Quản lý bài hát</a>
-        <a href="users.php"><i class="fa fa-users"></i> Quản lý người dùng</a>
+        <a href="admin.php"><i class=></i> Quản lý bài hát</a>
+        <a href="users.php"><i class=></i> Quản lý người dùng</a>
     </div>
 
     <div class="content">
@@ -193,6 +194,7 @@ session_start();
                     <th>ID</th>
                     <th>Tên Bài Hát</th>
                     <th>Tên Tác Giả</th>
+                    <th>File Nhạc</th>
                     <th>Thể Loại</th>
                     <th>Tâm Trạng</th>
                     <th>Thao Tác</th>
@@ -207,12 +209,18 @@ session_start();
                                 <td>{$row['id']}</td>
                                 <td>{$row['title']}</td>
                                 <td>{$row['artist']}</td>
+                                <td>{$row['file']}</td>
                                 <td>{$row['genre']}</td>
                                  <td>{$row['mood']}</td>
-                                <td>
-                                    <a href='edit.php?id={$row['id']}' class='btn btn-warning'>Sửa</a>
-                                    <a href='delete.php?id={$row['id']}' class='btn btn-danger'>Xóa</a>
-                                </td>
+<td>
+    <a href='edit.php?id={$row['id']}' class='btn btn-warning' title='Sửa'>
+        <i class='fas fa-edit'></i>
+    </a>
+    <a href='delete.php?id={$row['id']}' class='btn btn-danger' title='Xóa'>
+        <i class='fas fa-trash-alt'></i>
+    </a>
+</td>
+
                               </tr>";
                 }
                 ?>
@@ -228,6 +236,10 @@ session_start();
             <div class="mb-3">
                 <label for="artist" class="form-label">Tên Tác Giả</label>
                 <input type="text" class="form-control" id="artist" name="artist" required>
+            </div>
+            <div class="mb-3">
+                <label for="file" class="form-label">Chọn File Nhạc</label>
+                <input type="file" class="form-control" id="file" name="file" required>
             </div>
             <div class="mb-3">
                 <label for="genre" class="form-label">Thể Loại</label>

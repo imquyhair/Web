@@ -23,7 +23,7 @@ if (empty($user_message)) {
 }
 
 // Kiểm tra xem người dùng có yêu cầu tiếng Việt không
-$is_vietnamese = preg_match('/\b(tiếng việt|trả lời bằng tiếng việt|trả lời tiếng việt|việt nam)\b/i', $user_message);
+$is_vietnamese = preg_match('/\b(tiếng việt)\b/i', $user_message);
 
 // Truy vấn danh sách bài hát từ MySQL
 $sql = "SELECT id, title, artist, genre, mood, file FROM songs";

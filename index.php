@@ -36,7 +36,7 @@ $result_song = $conn->query($sql);
 
                 <div class="search-container">
                     <form action="search.php" method="GET" id="searchForm">
-                        <input type="text" name="search" id="searchInput" placeholder="Nhập tên bài hát hoặc nghệ sĩ...">
+                        <input type="text" name="search" id="searchInput" placeholder="Enter song name or artist...">
                         <button type="submit">🔍</button>
                     </form>
                 </div>
@@ -66,18 +66,18 @@ $result_song = $conn->query($sql);
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="logout.php">
-                                    <i class="fa-solid fa-sign-out-alt"></i> Đăng xuất
+                                    <i class="fa-solid fa-sign-out-alt"></i> Log out
                                 </a>
                             </li>
                         <?php else: ?>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="login.php">
-                                    <i class="fa-solid fa-sign-in-alt"></i> Đăng nhập
+                                    <i class="fa-solid fa-sign-in-alt"></i> Log in
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" href="register.php">
-                                    <i class="fa-solid fa-user-plus"></i> Đăng ký
+                                    <i class="fa-solid fa-user-plus"></i> Register
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -132,7 +132,7 @@ $result_song = $conn->query($sql);
     </div>
 
     <div class="container my-5">
-        <h1 class="section-title text-center mb-4" data-aos="fade-up">Hôm nay bạn thế nào</h1>
+        <h1 class="section-title text-center mb-4" data-aos="fade-up">How are you today</h1>
         <div class="songs-container">
             <div class="songs-wrapper">
                 <?php if ($result_chill && $result_chill->num_rows > 0): ?>
@@ -142,39 +142,39 @@ $result_song = $conn->query($sql);
                                 <img src="img/chill.jpg" alt="Chill-Lofi">
                             </a>
                             <h5>Chill-Lofi</h5>
-                            <p>Những giai điệu nhẹ nhàng</p>
+                            <p>Soft Melodies</p>
                         </div>
                         <div class="song-card" data-aos="fade-up">
                             <a href="rain_mood.php" class="btn btn-secondary">
                                 <img src="img/rainmood.jpg" alt="Rain Mood">
                             </a>
                             <h5>Rain Mood</h5>
-                            <p>Những giai điệu buồn nhẹ</p>
+                            <p>Soft Sad Melodies</p>
                         </div>
                         <div class="song-card" data-aos="fade-up">
                             <a href="/rap.php" class="btn btn-secondary">
                                 <img src="img/rap.jpg" alt="Rap">
                             </a>
                             <h5>Rap</h5>
-                            <p>Những bản nhạc hip-hop</p>
+                            <p>Hip-Hop Songs</p>
                         </div>
                         <div class="song-card" data-aos="fade-up">
                             <a href="pop.php" class="btn btn-secondary">
                                 <img src="img/dynamic.jpg" alt="Pop">
                             </a>
                             <h5>Pop</h5>
-                            <p>Những bản nhạc đương đại</p>
+                            <p>Contemporary Songs</p>
                         </div>
                         <div class="song-card" data-aos="fade-up">
                             <a href="thinking.php" class="btn btn-secondary">
                                 <img src="img/thinking.jpg" alt="Thinking">
                             </a>
                             <h5>Thinking</h5>
-                            <p>Những bản nhạc suy tư</p>
+                            <p>Reflection Songs</p>
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <p>Không có bài hát nào.</p>
+                    <p>No songs.</p>
                 <?php endif; ?>
             </div>
         </div>
@@ -183,8 +183,8 @@ $result_song = $conn->query($sql);
 
     <div class="container my-5" data-aos="fade-up">
         <div class="section-header">
-            <h5 class="section-titles">Danh sách bài hát</h5>
-            <a href="list_music.php" class="view-all">TẤT CẢ <i class="fas fa-chevron-right"></i></a>
+            <h5 class="section-titles">Song list</h5>
+            <a href="list_music.php" class="view-all">All<i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="song-list">
             <?php
@@ -207,7 +207,7 @@ $result_song = $conn->query($sql);
                     ?>
                 <?php endwhile; ?>
             <?php else: ?>
-                <p>Không có bài hát nào.</p>
+                <p>No songs.</p>
             <?php endif; ?>
         </div>
     </div>
@@ -225,7 +225,7 @@ $result_song = $conn->query($sql);
         </div>
         <div id="chatbot-messages"></div>
         <div id="chatbot-input">
-            <input type="text" id="chatbot-text" placeholder="Nhập câu hỏi...">
+            <input type="text" id="chatbot-text" placeholder="Enter question...">
             <button onclick="sendMessage()">Gửi</button>
         </div>
     </div>
@@ -235,30 +235,30 @@ $result_song = $conn->query($sql);
         <div class="container2">
             <div class="row">
                 <div class="col-md-3">
-                    <h5 class="fw-bold">Về chúng tôi</h5>
+                    <h5 class="fw-bold">About Us</h5>
                     <ul class="list-unstyled">
-                        <li><a href="about.html" class="text-light">Giới thiệu</a></li>
-                        <li><a href="jobs.html" class="text-light">Việc làm</a></li>
-                        <li><a href="news.html" class="text-light">Tin tức</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                        <li><a href="jobs.html" class="text-light">Jobs</a></li>
+                        <li><a href="news.html" class="text-light">News</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold">Cộng đồng</h5>
+                    <h5 class="fw-bold">Community</h5>
                     <ul class="list-unstyled">
-                        <li><a href="artists.html" class="text-light">Dành cho nghệ sĩ</a></li>
-                        <li><a href="developers.html" class="text-light">Nhà phát triển</a></li>
-                        <li><a href="ads.html" class="text-light">Quảng cáo</a></li>
+                        <li><a href="artists.html" class="text-light">For Artists</a></li>
+                        <li><a href="developers.html" class="text-light">Developers</a></li>
+                        <li><a href="ads.html" class="text-light">Advertisements</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold">Hỗ trợ</h5>
+                    <h5 class="fw-bold">Support</h5>
                     <ul class="list-unstyled">
-                        <li><a href="help.html" class="text-light">Trung tâm trợ giúp</a></li>
-                        <li><a href="mobile-app.html" class="text-light">Ứng dụng di động</a></li>
+                        <li><a href="help.html" class="text-light">Help Center</a></li>
+                        <li><a href="mobile-app.html" class="text-light">Mobile Apps</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold">Kết nối với chúng tôi</h5>
+                    <h5 class="fw-bold">Connect with us</h5>
                     <div class="social-icons1">
                         <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>

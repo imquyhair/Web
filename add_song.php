@@ -15,27 +15,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $artist = $_POST['artist'];
     $genre = $_POST['genre'];
     $mood = $_POST['mood'];
-    
+
     // Xử lý file upload
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $file_tmp = $_FILES['file']['tmp_name'];
         $file_name = $_FILES['file']['name'];
         $file_type = $_FILES['file']['type'];
-        
+
         // Đặt tên file và thư mục lưu trữ
         $upload_dir = 'uploads/songs/';
         if (!file_exists($upload_dir)) {
             mkdir($upload_dir, 0777, true);
         }
 
-        // Chuyển file vào thư mục uploads
+        // Chuyển file vào thư mục music
         $file_path = $upload_dir . basename($file_name);
         if (move_uploaded_file($file_tmp, $file_path)) {
             // Lưu dữ liệu vào cơ sở dữ liệu
             $sql = "INSERT INTO songs (title, artist, file, genre, mood) VALUES (?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sssss", $title, $artist, $file_path, $genre, $mood);
-            
+
             if ($stmt->execute()) {
                 // Nếu thêm thành công, chuyển đến trang quản lý bài hát
                 header("Location: admin.php");

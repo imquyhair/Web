@@ -4,29 +4,29 @@
       "content": {
         "parts": [
           {
-            "text": "Tôi gợi ý bạn nghe bài **Houdini** của Eminem, **Lovin On Me** của Jack Harlow, **Montero** của Lil Nas X, hoặc **Vị Nhà** của Đen.  Đây đều là những bài nhạc rap với nhiều sắc thái khác nhau, từ năng động đến hoài niệm. Bạn có thể chọn bài hát phù hợp với tâm trạng hiện tại của mình.\n"
+            "text": "Bài \"Hành Khúc Ngày Và Đêm\" có thể phù hợp với yêu cầu của bạn. Tuy thông tin thể loại và tâm trạng không rõ ràng, nhưng tên bài hát gợi ý đến một bài hát có tính chất hùng hồn, có thể thuộc thể loại nhạc đỏ. Bạn có thể thử nghe xem có đúng ý bạn muốn không.  Nếu không, rất tiếc là trong danh sách này không có bài nào được gắn nhãn \"nhạc đỏ\" cụ thể.\n"
           }
         ],
         "role": "model"
       },
       "finishReason": "STOP",
-      "avgLogprobs": -0.019006874187883126
+      "avgLogprobs": -0.12035147997797752
     }
   ],
   "usageMetadata": {
-    "promptTokenCount": 2348,
-    "candidatesTokenCount": 83,
-    "totalTokenCount": 2431,
+    "promptTokenCount": 3120,
+    "candidatesTokenCount": 98,
+    "totalTokenCount": 3218,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 2348
+        "tokenCount": 3120
       }
     ],
     "candidatesTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 83
+        "tokenCount": 98
       }
     ]
   },
